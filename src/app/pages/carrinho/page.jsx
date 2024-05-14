@@ -23,7 +23,7 @@ export default function Carrinho() {
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Produto</th>
-                            <th scope="col">Quantidade em Estoque</th>
+                            <th scope="col">Descrição</th>
                             <th scope="col">Preço</th>
                         </tr>
                     </thead>
@@ -31,8 +31,8 @@ export default function Carrinho() {
                         <tbody key={data.id}>
                             <tr>
                                 <th scope="row">{data.id}</th>
-                                <th scope="col"><span><img className="imagemProdutoTabela" src={data.imageUrl} alt="" />{data.name}</span></th>
-                                <th scope="col">{data.inStock}</th>
+                                <th scope="col"><span><img className="imagemProdutoTabela" src={data.thumbnail.replace(/\w\.jpg/gi, "W.jpg")} alt="" />{data.name}</span></th>
+                                <th scope="col">{data.title.replace("- Distribuidor Autorizado", "")}</th>
                                 <th scope="col">R$ {data.price}</th>
                                 <th scope="col">
                                     <span class="btn-group" role="group" aria-label="Basic mixed styles example">

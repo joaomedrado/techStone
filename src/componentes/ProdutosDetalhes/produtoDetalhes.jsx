@@ -14,13 +14,13 @@ export default function ProdutoDetalhesComponente(props) {
     };
     return (
         <div className="flexCard2">
-            {data ? (
+            {data ?(
                 <div className="flexCard2" key={data.id}>
                     <div className="flexImagem">
-                        <img src={data.imageUrl} alt="" />
+                        <img src={data.thumbnail.replace(/\w\.jpg/gi, "W.jpg")} alt="" />
                     </div>
                     <div className="flexDescricao2">
-                        <h1>{data.name}</h1>
+                        <h1>{data.title.replace("- Distribuidor Autorizado", "")}</h1>
                         <p>{data.description}</p>
                         <p className="price">R$ {data.price}</p>
                           <Botao 

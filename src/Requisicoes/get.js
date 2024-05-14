@@ -6,9 +6,9 @@ class Get{
     }
 
     async metodoFetch(){
-        const response = await fetch("http://localhost:4000/Produtos");
+        const response = await fetch("https://api.mercadolibre.com/sites/MLB/search?q=iphone");
         const data = await response.json();
-        return data;
+        return data.results;
     }
 
     metodoUseEffect(){
