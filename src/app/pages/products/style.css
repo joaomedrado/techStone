@@ -1,0 +1,45 @@
+.flexTituloCards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+    padding: 5vw;
+
+}
+
+
+.flexCards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 80px;
+}
+.flexCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.flexCard img{
+    width: 600px;
+    height: 500px;
+}
+
+.flexDescricao{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 50px;
+    width: 600px;
+    gap: 10px;
+}
+.botaoUnico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 80px;
+}

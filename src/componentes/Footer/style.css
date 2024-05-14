@@ -1,0 +1,35 @@
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: black;
+    padding: 50px;
+    gap: 15%;
+}
+.sessaoOne .flexBoxSessaoOne{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 20px;
+}
+.flexBoxSessaoOne h1{
+    color: white;
+}
+.flexBoxSessaoOne h2{
+    color: #5d5d61;
+}
+
+.sessaoTwo .flexBoxSessaoTwo{
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.flexBoxSessaoTwo h1{
+    color: white;
+}
+.flexBoxSessaoTwo h2{
+    color: #5d5d61;
+}

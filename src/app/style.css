@@ -1,0 +1,101 @@
+.sessaoOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.flexBoxOne{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 40px;
+    
+}
+.flexBoxOne h1{
+    text-align: center;
+    font-weight: 500;
+}
+
+.sessaoTwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 30px;
+}
+.flexBoxTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    width: 900px;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 40px;
+    
+}
+.flexBoxTwo h1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 4rem;
+    color: white;
+}
+.flexBoxTwo h2{
+    text-align: center;
+    font-weight: 500;
+    color: #5d5d61;
+}
+.flexBoxThree{
+    display: flex;
+    flex-direction: column;
+}
+.flexBoxThree div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagemSessaoTwo{
+    height: 700px;
+    
+}
+.sessaoThree{
+    background-color: white;
+    padding-top: 260px;
+    
+}
+.flexBoxFor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    background-color: white;
+}
+.flexBoxFor img{
+    height: 600px;
+}
+
+.flexTituloSessaoThree{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap:wrap ;
+    gap: 15px;
+    width: 24vw;
+    
+}
+.flexTituloSessaoThree h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.flexTituloSessaoThree h2{
+    font-size: 1.3rem;
+    color: #5d5d61;
+
+}
