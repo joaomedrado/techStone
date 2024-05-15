@@ -10,7 +10,7 @@
   \******************************************************************************************************************************************************************************************************************************************************************************/
 .flexTituloCards{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     height: 100px;
     padding: 5vw;
@@ -77,4 +77,30 @@
     to{
         transform: rotate(360deg);
     }
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/componentes/BarraPesquisa/style.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 250px;
+    padding: 15px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0px 1px 10px  1px rgba(0, 0, 0, 0.249);
+    outline: none;
+}
+button{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 14px;
+    border: none;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 4px  0px rgba(0, 0, 0, 0.249);
 }

@@ -9,22 +9,11 @@ import "../../node_modules/aos/dist/aos.css"
 
 
 export default function Home() {
-  const [dadosApi, setDadosApi] = useState([]);
-  const get = new Get(setDadosApi)
-
-  useEffect(() => {
-    get.metodoUseEffect(setDadosApi);
-  }, [])
-
   useEffect(()=>{
     AOS.init({
       duration: 1500,
     });
   },[])
-
-  const ipadApresentacao = dadosApi.length > 0 ? dadosApi[9] : null;
-  const celularIpadApresentacao = dadosApi.length > 0 ? dadosApi[7] :  null;
-
 
   return (
     <Provider>
@@ -41,11 +30,7 @@ export default function Home() {
           <Botao style="btn btn-light" text = "Saiba Mais" rota="/pages/products" />
         </div>
         <div className="flexBoxThree">
-          {ipadApresentacao ?
-            <div key={ipadApresentacao.id}>
-              <img className="imagemSessaoTwo" src={ipadApresentacao.imageUrlBlack} alt="" />
-            </div>
-            : null}
+              <img className="imagemSessaoTwo" src="https://i.ibb.co/KK49jcz/ipadpro11-digitalmat-gallery-1-202111-GEO-BR-removebg-preview.png" alt="" />
         </div>
       </section>
       <section className="sessaoThree">
@@ -55,11 +40,9 @@ export default function Home() {
                 <h2>Abra esta página no seu iPhone ou iPad usando o Safari.</h2>
                 <Botao text = "Saiba Mais" style="btn btn-outline-dark" rota="/pages/products"/>
               </div>
-              {celularIpadApresentacao ? 
-                <div key={celularIpadApresentacao.id}>
-                  <img src={celularIpadApresentacao.imagemIpad} alt="" />
+                <div>
+                  <img src="https://www.apple.com/br/ipad-10.9/images/overview/ar/ar_ipad_silver__gh7qtof6d5ay_large_2x.jpg" alt="" />
                 </div>
-              : null}
           </div>
       </section>
     </Provider>
