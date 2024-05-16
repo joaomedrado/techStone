@@ -15,7 +15,7 @@ export default function BarraPesquisa(){
     const metodoBuscarProdutos = (ev)=>{
         ev.preventDefault();
         const produtosRequisicao = new Get(setProdutos, buscarProdutos);
-        produtosRequisicao.metodoUseEffect();
+        produtosRequisicao.metodoUseEffect()
         setLoading(false)
     }
 

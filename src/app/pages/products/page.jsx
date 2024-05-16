@@ -18,6 +18,9 @@ export default function Produtos(){
         setLoading(false)
     },[])
 
+
+    console.log(produtos)
+
     return(
         <>
             <div className="flexTituloCards">
