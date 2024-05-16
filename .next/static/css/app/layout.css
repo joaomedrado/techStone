@@ -150,4 +150,5 @@ footer{
 .botao{
     padding: 20px;
     width: 180px;
+    align-items: center;
 }

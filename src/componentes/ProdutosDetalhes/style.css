@@ -1,13 +1,13 @@
-.flexCard2{
+.flexCardID{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
 }
-.flexCard2 .flexImagem img{
+.flexCardID .flexImagem img{
     height: 100vh;
 }
-.flexCard2 .flexDescricao2{
+.flexCardID .flexDescricao2{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -28,4 +28,39 @@
 .flexDescricao2 .price{
     color: #5d5d61 ;
     font-weight: 600;
+}
+.flexBotaoCardDetalhes{
+    display: flex;
+    gap: 10px;
+}
+.botaoUnicoVerDetalhes{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.flexTableDescricao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}   
+
+.tableDescricao{
+    width: 90vw;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+}
+.flexTableBody th{
+    padding: 15px;
+    font-size: 1.2rem;
+}
+.flexTableBody td{
+    font-size: 1.1rem;
+}
+.flexTableBody td:hover{
+    color: black;
+    font-weight: 600;
+
 }
