@@ -18,7 +18,7 @@ export default function Produtos(){
         setLoading(false)
     },[])
 
-
+    
     return(
         <>
             <div className="flexTituloCards">
@@ -26,7 +26,7 @@ export default function Produtos(){
                 <BarraPesquisa/>
             </div>
             <div className="flexBody">
-                {loading ? <Loading/> : (
+                {loading ? <Loading/> :  (
                     <div className="flexCards">
                     {produtos.map((data)=>(
                         <div className="flexCard" key={data.id}>
