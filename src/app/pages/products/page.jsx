@@ -19,8 +19,6 @@ export default function Produtos(){
     },[])
 
 
-    console.log(produtos)
-
     return(
         <>
             <div className="flexTituloCards">
@@ -36,7 +34,10 @@ export default function Produtos(){
                             <div className="flexDescricao">
                                 <div className="flexText">
                                     <h2>{data.title.replace("- Distribuidor Autorizado", "")}</h2>
-                                    <p>R$ {data.price}</p>
+                                    <p>{data.price.toLocaleString("pt-br",{
+                                        style: "currency",
+                                        currency: "BRL"
+                                    })}</p>
                                 </div>
                                  <Botao
                                  classUnica = "botaoUnico"

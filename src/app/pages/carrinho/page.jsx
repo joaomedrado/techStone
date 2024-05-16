@@ -33,7 +33,10 @@ export default function Carrinho() {
                                 <th scope="row">{data.id}</th>
                                 <th scope="col"><span><img className="imagemProdutoTabela" src={data.thumbnail.replace(/\w\.jpg/gi, "W.jpg")} alt="" />{data.name}</span></th>
                                 <th scope="col">{data.title.replace("- Distribuidor Autorizado", "")}</th>
-                                <th scope="col">R$ {data.price}</th>
+                                <th scope="col">{data.price.toLocaleString("pt-br",{
+                                    style: "currency",
+                                    currency: "BRL"
+                                })}</th>
                                 <th scope="col">
                                     <span class="btn-group" role="group" aria-label="Basic mixed styles example">
                                         <button  type="button" className="btn btn-danger botaoExcluirCarrinho " onClick={() => metodoExcluirProduto(data.id)}>Excluir</button>
@@ -48,7 +51,10 @@ export default function Carrinho() {
                 <div className="flexValorTotal">
                     <span className="valorTotal">
                         <button type="button" class="btn btn-outline-dark">Realizar Compra</button>
-                        <button type="button" class="btn btn-success" disabled>R$ {valorTotal}</button>
+                        <button type="button" class="btn btn-success" disabled>{valorTotal.toLocaleString("pt-br",{
+                                    style: "currency",
+                                    currency: "BRL"
+                                })}</button>
                     </span>
 
                 </div>

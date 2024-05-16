@@ -22,7 +22,10 @@ export default function ProdutoDetalhesComponente(props) {
                     <div className="flexDescricao2">
                         <h1>{data.title.replace("- Distribuidor Autorizado", "")}</h1>
                         <p>{data.description}</p>
-                        <p className="price">R$ {data.price}</p>
+                        <p className="price">{data.price.toLocaleString("pt-br",{
+                            style: "currency",
+                            currency: "BRL"
+                        })}</p>
                           <Botao 
                              classUnica = "botaoUnico"
                              text = "Adicionar Carrinho" 
