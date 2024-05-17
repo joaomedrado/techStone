@@ -5,7 +5,7 @@ export default function Header(){
 
         <>
             <header>
-                <Link className="logo" href="/pages/">TechStore</Link>
+                <Link className="logo" href="/">TechStore</Link>
                 <nav>
                     <Link className="linksHeader"  href="/">Home</Link>
                     <Link className="linksHeader"  href="/pages/products">Produtos</Link>

@@ -1,8 +1,9 @@
 .flexCardID{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 50px;
+    gap: 5vw;
 }
 .flexCardID .flexImagem img{
     height: 100vh;
@@ -51,6 +52,7 @@
     background: #e0e0e0;
     box-shadow:  20px 20px 60px #bebebe,
                 -20px -20px 60px #ffffff;
+    margin-bottom: 200px;
 }
 .flexTableBody th{
     padding: 15px;

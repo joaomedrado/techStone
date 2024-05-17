@@ -1,24 +1,23 @@
 "use client"
 import Get from "@/Requisicoes/get"
 import Botao from "@/componentes/Botao/botao";
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import "./style.css"
 import Loading from "@/componentes/Loading/loading";
 import BarraPesquisa from "@/componentes/BarraPesquisa/barraPesquisa";
 import AppContext from "@/context/AppContext";
 
 export default function Produtos(){
-    const {produtos, setProdutos} = useContext(AppContext)
+    const {produtos, setProdutos} = useContext(AppContext);
     const {loading,setLoading} = useContext(AppContext);
-
-    const get = new Get(setProdutos);
+    const get = new Get(setProdutos, "iphone");
 
     useEffect(()=>{
-        get.metodoUseEffect();
-        setLoading(false)
+       get.metodoFetch().then((data)=>{
+            setProdutos(data);
+            setLoading(false)
+       })
     },[])
-
-    
     return(
         <>
             <div className="flexTituloCards">

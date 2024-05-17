@@ -1,12 +1,15 @@
 "use client"
 import AppContext from "../../../context/AppContext";
-import { useContext } from "react";
+import { useEffect, useContext } from "react";
 import "./style.css"
 import Botao from "@/componentes/Botao/botao";
 export default function Carrinho() {
 
     const { carrinho, setCarrinho } = useContext(AppContext);
 
+    useEffect(()=>{
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+    },[])
 
     const metodoExcluirProduto = (id) => {
         const atualizarItems = carrinho.filter((item) => item.id != id)

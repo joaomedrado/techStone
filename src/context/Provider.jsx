@@ -1,14 +1,23 @@
 "use client"
 
-import { useState } from "react";
+import {useEffect, useState } from "react";
 import AppContext from "./AppContext";
 
-export default function Provider({children}){
+export default function Provider({ children }) {
 
     const [carrinho, setCarrinho] = useState([]);
-    const [produtos, setProdutos] =  useState([]);
+    const [produtos, setProdutos] = useState([]);
     const [loading, setLoading] = useState(true)
-    const [buscarProdutos, setBuscarProdutos] =  useState("");
+    const [buscarProdutos, setBuscarProdutos] = useState("");
+
+    useEffect(()=>{
+        const carrinhoLocalStorage = JSON.parse(localStorage.getItem("carrinho"));
+        if(carrinhoLocalStorage){
+            setCarrinho(carrinhoLocalStorage);
+        }
+    },[])
+  
+
     const value = {
         carrinho,
         setCarrinho,
@@ -19,9 +28,11 @@ export default function Provider({children}){
         buscarProdutos,
         setBuscarProdutos
     }
-    return(
+    
+   
+    return (
         <AppContext.Provider value={value}>
-        {children}
+            {children}
         </AppContext.Provider>
     )
 }
