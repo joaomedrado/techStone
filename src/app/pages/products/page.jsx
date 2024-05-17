@@ -19,39 +19,40 @@ export default function Produtos(){
        })
     },[])
     return(
-        <>
-            <div className="flexTituloCards">
-                <h1 className="tituloCards">Produtos</h1>
-                <BarraPesquisa/>
-            </div>
-            <div className="flexBody">
-                {loading ? <Loading/> :  (
-                    <div className="flexCards">
-                    {produtos.map((data)=>(
-                        <div className="flexCard" key={data.id}>
-                            <img src={data.thumbnail.replace(/\w\.jpg/gi, "W.jpg")} alt="" />
-                            <div className="flexDescricao">
-                                <div className="flexText">
-                                    <h2>{data.title.replace("- Distribuidor Autorizado", "")}</h2>
-                                    <p>{data.price.toLocaleString("pt-br",{
-                                        style: "currency",
-                                        currency: "BRL"
-                                    })}</p>
-                                </div>
-                                 <Botao
-                                 classUnica = "botaoUnico"
-                                 text = "Ver Detalhes"
-                                 style="btn btn-outline-dark"
-                                 rota={`/pages/${data.id}/products/`}
-                                 />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                )}
-                
-            </div>
+        <div className="mainProducts">
             
-        </>
+                <div className="flexTituloCards">
+                    <h1 className="tituloCards">Produtos</h1>
+                    <BarraPesquisa/>
+                </div>
+                <div className="flexBody">
+                    {loading ? <Loading/> :  (
+                        <div className="flexCards">
+                        {produtos.map((data)=>(
+                            <div className="flexCard" key={data.id}>
+                                <img src={data.thumbnail.replace(/\w\.jpg/gi, "W.jpg")} alt="" />
+                                <div className="flexDescricao">
+                                    <div className="flexText">
+                                        <h2>{data.title.replace("- Distribuidor Autorizado", "")}</h2>
+                                        <p>{data.price.toLocaleString("pt-br",{
+                                            style: "currency",
+                                            currency: "BRL"
+                                        })}</p>
+                                    </div>
+                                     <Botao
+                                     classUnica = "botaoUnico"
+                                     text = "Ver Detalhes"
+                                     style="btn btn-outline-dark"
+                                     rota={`/pages/${data.id}/products/`}
+                                     />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    )}
+            
+                </div>
+        </div>
+
     )
 }
